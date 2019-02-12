@@ -13,13 +13,13 @@ public class oop2_coursework_2 {
 		int stuMark;
 		
 		Scanner _insert = new Scanner(System.in);// Scanner variable
-		
-		for (int i = 0; i <= stuNames.size();) { //Start of the first loop
+		int i = 0;
+		while ( i <= stuNames.size()) { //Start of the first loop
 			if (stuNames.size() == 6) {
 				break;
 			} else 
 				System.out.println("Enter Student Name: ");
-				stuName = _insert.nextLine();
+				stuName = _insert.next();
 				stuNames.add(stuName); //End of first Loop
 				
 				for (int k = 0; k <= stuCourses.size(); k++) { //Second Loop
@@ -27,7 +27,7 @@ public class oop2_coursework_2 {
 						break;
 					} else 
 						System.out.println("Enter Student course: ");
-						stuCourse = _insert.nextLine();
+						stuCourse = _insert.next();
 						stuCourses.add(stuCourse);
 						for (int j = 0; j <= stuMarks.size(); j++) { //third Loop
 							if (stuMarks.size() == stuCourses.size()) {
