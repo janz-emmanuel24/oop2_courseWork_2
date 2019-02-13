@@ -9,8 +9,8 @@ public class oop2_coursework_2 {
 		ArrayList<String> stuCourses = new ArrayList<String>();
 		ArrayList<Integer> stuMarks = new ArrayList<Integer>();
 		//Creating variables
-		String stuName, stuCourse;
-		int stuMark, toMark = 0, aveMark = 0;
+		String stuName, printName, stuCourse, printCourse;
+		int stuMark, toMark = 0, aveMark = 0, printMark = 0, result = 0;
 		
 		Scanner _insert = new Scanner(System.in);// Scanner variable
 		int i = 0;
@@ -51,10 +51,15 @@ public class oop2_coursework_2 {
 		//looping through the marks to get total
 		for (int m = 0; m <= stuMarks.size()-1; m++) {
 			toMark += stuMarks.get(m);
-			//System.out.println(toMark);
+			//printMark = stuMarks.get(m);
+			//System.out.println(printMark);
 		}
 		aveMark = toMark / stuMarks.size();
 		System.out.println(aveMark);
+		for (int x =0; x <= stuMarks.size()-1; x++) {
+			System.out.println("Student Name: " + stuNames.get(x) + "Student Courses: " + stuCourses.get(x) + "Student Marks: " + stuMarks.get(x));
+		}
+		
 	}
 
 }
