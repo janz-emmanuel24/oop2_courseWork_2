@@ -10,7 +10,7 @@ public class oop2_coursework_2 {
 		ArrayList<Integer> stuMarks = new ArrayList<Integer>();
 		//Creating variables
 		String stuName, printName, stuCourse, printCourse;
-		int stuMark, toMark = 0, aveMark = 0, printMark = 0, result = 0;
+		int stuMark, toMark = 0, aveMark = 0, printMark = 0, result = 0, mm =12;
 		
 		Scanner _insert = new Scanner(System.in);// Scanner variable
 		int i = 0;
