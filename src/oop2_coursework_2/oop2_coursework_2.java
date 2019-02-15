@@ -1,5 +1,4 @@
 package oop2_coursework_2;
-import java.util.*;
  
 public class oop2_coursework_2 {
  
@@ -13,12 +12,12 @@ public class oop2_coursework_2 {
 		
 		do {
 			System.out.print("Enter Student name: ");
-			stuName = stu_Data.next();
+			stuName = stu_Data.nextLine();
 			addedStudents.add(stuName);
 			int stuMark;
 			String stuCourse = null;
 			for (int i = 0; i <= 5; i++) {
-				System.out.print("Enter student course " + (i+1) + ": ");
+				System.out.print("Enter student course-Name " + (i+1) + ": ");
 				stuCourse = stu_Data.next();
 				stuCourses.add(stuCourse); 
 				System.out.print("Enter " + stuCourses.get(i) + " marks: ");
@@ -34,11 +33,12 @@ public class oop2_coursework_2 {
 			}
 			System.out.println("Enter another student: yes / no");
 			promt = stu_Data.next();
-			if (promt.toLowerCase().equals("no")) {
+			
+			if (promt.toLowerCase().equals("no") || promt.toLowerCase().equals("yes")) {
 				break;
 			}
 			
-		} while(promt.toLowerCase().equals("yes"));
+		} while(true);
 		
 		System.out.println("**********************************************");
 		System.out.println("**********************************************");
@@ -54,7 +54,7 @@ public class oop2_coursework_2 {
 			stdTotalMarks += stuMarks.get(j);
 			total = stdTotalMarks;
 			stdAve = total / 6;
-			System.out.println(stuCourses.get(j) + "                   " + stuMarks.get(j));
+			System.out.println(stuCourses.get(j) + "                  " + stuMarks.get(j));
 		}
 		System.out.println("**********************************************");
 		System.out.println("Total Marks: " + total);
