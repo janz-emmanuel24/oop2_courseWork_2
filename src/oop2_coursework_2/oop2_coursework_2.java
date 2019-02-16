@@ -1,44 +1,49 @@
 package oop2_coursework_2;
- 
+/*********************README*********************8
+ *  created a class oop2_coursework_2 As the Main Class
+ *  Author: Jansuk Emmanuel 
+ */
+
+
 public class oop2_coursework_2 {
  
 	public static void main(String[] args) {
+		java.util.Scanner stuData = new java.util.Scanner(System.in);//main Scanner Object
 		String promt = null;
 		String stuName = null;
-		java.util.ArrayList<String> addedStudents = new java.util.ArrayList<String>();
-		java.util.ArrayList<String> stuCourses = new java.util.ArrayList<String>();
-		java.util.ArrayList<Integer> stuMarks = new java.util.ArrayList<Integer>();
-		java.util.Scanner stu_Data = new java.util.Scanner(System.in);
+		java.util.ArrayList<String> addedStudents = new java.util.ArrayList<String>();// To hold students Added
+		java.util.ArrayList<String> stuCourses = new java.util.ArrayList<String>();//To hold Courses
+		java.util.ArrayList<Integer> stuMarks = new java.util.ArrayList<Integer>();//To hold marks
 		
-		do {
+		do {//loop starts
 			System.out.print("Enter Student name: ");
-			stuName = stu_Data.nextLine();
+			stuName = stuData.nextLine();
 			addedStudents.add(stuName);
 			int stuMark;
 			String stuCourse = null;
 			for (int i = 0; i <= 5; i++) {
 				System.out.print("Enter student course-Name " + (i+1) + ": ");
-				stuCourse = stu_Data.next();
+				stuCourse = stuData.next();
 				stuCourses.add(stuCourse); 
 				System.out.print("Enter " + stuCourses.get(i) + " marks: ");
-				stuMark = stu_Data.nextInt();
+				stuMark = stuData.nextInt();
 				stuMarks.add(stuMark);
 				if (stuMarks.get(i) < 0 || stuMarks.get(i) > 100) {
 					stuMarks.remove(i);
 					System.out.println("Invalid mark!!!" + '\n' + "Mark is between 0 and 100" + '\n' + "Enter mark Again:");
-					stuMark = stu_Data.nextInt();
+					stuMark = stuData.nextInt();
 					stuMarks.add(i,stuMark);
 				}
 				
 			}
 			System.out.println("Enter another student: yes / no");
-			promt = stu_Data.next();
+			promt = stuData.next();
 			
 			if (promt.toLowerCase().equals("no") || promt.toLowerCase().equals("yes")) {
 				break;
 			}
 			
-		} while(true);
+		} while(true);//loop ends
 		
 		System.out.println("**********************************************");
 		System.out.println("**********************************************");

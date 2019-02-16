@@ -7,12 +7,12 @@ public class _classExercise {
 		java.util.ArrayList<String> _stuNames = new java.util.ArrayList <String>();
 		int i = 0;
 		int n = 0;
-		while (i <= _stuNames.size()) {
+		while (i <= _stuNames.size()) {// Loop until exit is entered
 			n = i + 1;
 			System.out.print("Enter Student name " + n + ": ");
-			java.util.Scanner _nameInput = new java.util.Scanner(System.in);
-			String _stuName = _nameInput.nextLine();
-			if (_stuName.toLowerCase().equals("exit")) {
+			java.util.Scanner nameInput = new java.util.Scanner(System.in);
+			String _stuName = nameInput.nextLine();
+			if (_stuName.toLowerCase().equals("exit")) {//To break when the word exit is entered
 				break;
 			} else
 				_stuNames.add(_stuName);
