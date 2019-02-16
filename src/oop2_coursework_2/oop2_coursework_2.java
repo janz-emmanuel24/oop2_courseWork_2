@@ -1,5 +1,5 @@
 package oop2_coursework_2;
-/*********************README*********************8
+/*********************README*********************
  *  created a class oop2_coursework_2 As the Main Class
  *  Author: Jansuk Emmanuel 
  */
@@ -46,7 +46,6 @@ public class oop2_coursework_2 {
 		} while(true);//loop ends
 		
 		System.out.println("**********************************************");
-		System.out.println("**********************************************");
 		System.out.print('\n');
 		
 		
@@ -59,7 +58,7 @@ public class oop2_coursework_2 {
 			stdTotalMarks += stuMarks.get(j);
 			total = stdTotalMarks;
 			stdAve = total / 6;
-			System.out.println(stuCourses.get(j) + "                  " + stuMarks.get(j));
+			System.out.println(stuCourses.get(j) + "                   " + stuMarks.get(j));
 		}
 		System.out.println("**********************************************");
 		System.out.println("Total Marks: " + total);
