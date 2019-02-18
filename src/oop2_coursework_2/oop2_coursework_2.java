@@ -4,7 +4,6 @@ package oop2_coursework_2;
  *  Author: Jansuk Emmanuel 
  */
 
-
 public class oop2_coursework_2 {
  
 	public static void main(String[] args) {
