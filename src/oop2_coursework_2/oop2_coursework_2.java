@@ -17,7 +17,7 @@ public class oop2_coursework_2 {
 		
 		do {//loop starts
 			System.out.print("Enter Student name: ");
-			stuName = stuData.nextLine();
+			stuName = stuData.next();
 			addedStudents.add(stuName);
 			int stuMark;
 			String stuCourse = null;
@@ -36,34 +36,39 @@ public class oop2_coursework_2 {
 				}
 				
 			}
+			System.out.println("*********************************************");
+			System.out.print('\n');
+			int stdTotalMarks = 0;// getting student Total Marks:
+			int stdAve = 0;
+			int total = 0;
+			System.out.println("Student Name:" + addedStudents.get(0));
+			System.out.println("Student Course: " + " *** " + "Student Marks: ");
+			for (int j = 0; j <= 5; j++) {
+				stdTotalMarks += stuMarks.get(j);
+				total = stdTotalMarks;
+				stdAve = total / 6;
+				System.out.println(stuCourses.get(j) + "                   " + stuMarks.get(j));
+			}
+			System.out.println("**********************************************");
+			System.out.println("Total Marks: " + total);
+			System.out.println("Student Average Marks: " + stdAve);
+			System.out.println("**********************************************");
 			System.out.println("Enter another student: yes / no");
 			promt = stuData.next();
+			System.out.println("***********************************************");
+			System.out.print('\n');
 			
-			if (promt.toLowerCase().equals("no") || promt.toLowerCase().equals("yes")) {
+			if (promt.toLowerCase().equals("no")) {
 				break;
+			} else if (promt.toLowerCase().equals("yes")) {
+				stuName = null;
+				addedStudents.clear();
+				stuCourses.clear();
+				stuMarks.clear();
 			}
 			
-		} while(true);//loop ends
-		
-		System.out.println("**********************************************");
-		System.out.print('\n');
-		
-		
-		int stdTotalMarks = 0;// getting student Total Marks:
-		int stdAve = 0;
-		int total = 0;
-		System.out.println("Student Name:" + addedStudents.get(0));
-		System.out.println("Student Course: " + " *** " + "Student Marks: ");
-		for (int j = 0; j <= 5; j++) {
-			stdTotalMarks += stuMarks.get(j);
-			total = stdTotalMarks;
-			stdAve = total / 6;
-			System.out.println(stuCourses.get(j) + "                   " + stuMarks.get(j));
-		}
-		System.out.println("**********************************************");
-		System.out.println("Total Marks: " + total);
-		System.out.println("Student Average Marks: " + stdAve);
-		System.out.println("**********************************************");
+		} while(promt.toLowerCase().equals("yes"));//loop ends
+	
 	}
  		 			 
 }
